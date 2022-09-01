@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Minhas finanças </h1> 
+
+    <div id="receita">
+
+        <h1>Receita</h1>
+
+        <input type="number" id="valor_receita" placeholder="Valor da Receita" required/>
+        <input type="text" id="categoria_receita" placeholder="Categoria da Receita" required/>
+
+        <button onclick="adicionarReceita()">Salvar Receita</button>
+
+    </div>
+
+    <div id="despesa">
+
+        <h1>Despesa</h1>
+
+        <input type="number" id="valor_despesa" placeholder="Valor da Despesa" required/>
+        <input type="text" id="categoria_despesa" placeholder="Categoria da Despesa" required/>
+
+        <button onclick="adicionarDespesa()">Salvar Despesa</button>
+
+    </div>
+
+    <br/><br/>
+
+    <div id="tables">
+
+        <h1>Transações</h1>
+
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src="../js/receita.js"></script>
+    <script src="../js/despesa.js"></script>
+
+</body>
+</html>
+
+
