@@ -9,39 +9,108 @@
 </head>
 <body>
 
+    <header>
+
+        <nav>
+
+            <ul>
+
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="receita.html">Receita</a></li>
+                <li> <a href="despesa.html">Despesa</a></li>
+                <li> <a href="transacoes.html">Transações</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
     <h1>Minhas finanças </h1> 
 
-    <div id="receita">
+    <div class="display-card">
+
+        <div class="saldo_total card blue">
+
+            <label> Saldo Total</label><br/>
+            <h2>
+                <span id="valor_saldo_total">
+                    R$ 0,00
+                </span>
+            </h2>
+    
+        </div>
+    
+        <div class="receita_total card green">
+    
+            <label> Receita Total</label><br/>
+            <h2>
+                <span id="valor_receita_total">R$ 0,00</span>
+            </h2>
+    
+        </div>
+    
+        <div class="despesa_total card red">
+    
+            <label> Despesa Total</label><br/>
+            <h2>
+                <span id="valor_despesa_total">R$ 0,00</span>
+            </h2>
+    
+        </div>
+
+    </div>
+
+    <div id="receita" class="receita">
 
         <h1>Receita</h1>
 
         <input type="number" id="valor_receita" placeholder="Valor da Receita" required/>
-        <input type="text" id="categoria_receita" placeholder="Categoria da Receita" required/>
-
+        <select id="categoria_receita">
+            <option>Salário</option>
+            <option>investimento</option>
+        </select>
+        <input id="data_receita" type="date">
+        
         <button onclick="adicionarReceita()">Salvar Receita</button>
+
+        <br/>
+        <span id="error_receita" class="error-msg"></span>
+        <span id="sucesso_receita" class="sucesso-msg"></span>
 
     </div>
 
-    <div id="despesa">
+    <br/>
+    <br/>
+
+    <div id="despesa" class="despesa">
 
         <h1>Despesa</h1>
 
         <input type="number" id="valor_despesa" placeholder="Valor da Despesa" required/>
-        <input type="text" id="categoria_despesa" placeholder="Categoria da Despesa" required/>
-
+        <select id="categoria_despesa">
+            <option>Aluguel</option>
+            <option>Alimentação</option>
+        </select>
+        <input id="data_despesa" type="date">
+       
         <button onclick="adicionarDespesa()">Salvar Despesa</button>
+        
+        <br/>
+        <span id="error" class="error-msg"></span>
+        <span id="sucesso_despesa" class="sucesso-msg"></span>
+
 
     </div>
 
-    <br/><br/>
-
     <div id="tables">
 
-        <h1>Transações</h1>
+        <h1>Histórico</h1>
 
         <table id="table">
             <thead>
                 <tr>
+                    <th>Data</th>
                     <th>Tipo</th>
                     <th>Valor</th>
                     <th>Categoria</th>
@@ -49,9 +118,29 @@
             </thead>
         </table>
     </div>
+    
+    <br/><br/>
+
+    <div id="categoria" class="categoria">
+
+        <h1>Categoria</h1>
+
+        <input type="text" id="nome_categoria" placeholder="Nome da Categoria" required/>
+        <select id="tipo_categoria">
+            <option>receita</option>
+            <option>despesa</option>
+        </select>
+       
+        <button onclick="adicionarCategoria()">Criar categoria</button>
+        
+        <br/>
+
+    </div>
 
     <script src="../js/receita.js"></script>
     <script src="../js/despesa.js"></script>
+    <script src="../js/saldo.js"></script>
+    <script src="../js/categoria.js"></script>
 
 </body>
 </html>

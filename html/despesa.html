@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <nav>
+
+            <ul>
+
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="receita.html">Receita</a></li>
+                <li> <a href="despesa.html">Despesa</a></li>
+                <li> <a href="transacoes.html">Transações</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <h1>Minhas finanças </h1> 
+
+    <div id="despesa">
+
+        <h1>Despesa</h1>
+
+        <input type="number" id="valor_despesa" placeholder="Valor da Despesa" required/>
+        <input type="text" id="categoria_despesa" placeholder="Categoria da Despesa" required/>
+
+        <button onclick="adicionarDespesa()">Salvar Despesa</button>
+
+    </div>
+
+    <div id="tables">
+
+        <h1>Transações</h1>
+
+        <table id="table-despesa">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+    <br/><br/>
+
+    <div class="despesa_total">
+
+        <label> Despesa Total</label><br/>
+        <span id="valor_despesa_total">R$ 0,00</span>
+
+    </div>
+
+    <br/><br/>
+
+    <script src="../js/despesa.js"></script>
+
+</body>
+</html>
+
+
